@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  git:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    ports:
+      - 22:22
