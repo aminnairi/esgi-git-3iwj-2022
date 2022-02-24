@@ -254,42 +254,100 @@ terminé les changements et que notre branche de travail n'est plus nécessaire,
 nous pouvons la supprimer en utilisant la commande `git branch` avec l'option
 `--delete` afin de supprimer la branche souhaitée, ici `new-documentation`.
 
-4.10 rebase
-4.11 tag
-4.12 stash
-4.13 mv
-4.14 rm
-4.15 diff
-4.16 remote
-4.17 pull
-4.18 clone
-5 GitHub
-5.1 Introduction
-5.2 Création d'un compte
-5.3 Configuration OpenSSH
-5.4 Création d'un dépôt
-5.5 Markdown
-5.6 README
-5.7 Issues
-5.8 Pull requests
-5.9 Guide de contribution
-5.10 License
-5.11 Modèle d'issue
-5.12 Modèle de pull request
-5.13 Milestone
-5.14 Projets & Kanban
-5.15 Versioning sémantique
-5.16 Badges
-5.17 GitHub Pages
-6 GitHub Action
-6.1 Introduction
-6.2 Automatisation
-6.3 Intégration continue
-6.4 Déploiement continu
-7 Serveur Git local
-7.1 Introduction
-7.2 Dépendances
-7.3 Administration
-7.4 Sécurisation
-7.5 Dépôt
-7.6 Tests
+#### Modifier l'historique
+
+Il peut arriver que certains commit fait par erreur entraîne une fuite de
+données sensible comme des mots de passes par exemple. Une fois historisés et
+publiés, ils ne suffit pas de modifier de nouveau le fichier puisque les
+changements fait par le passés sont toujours visibles par les personnes ayant
+accès au dépôt. Néanmoins, il est toujours possible de modifier complètement
+l'historique.
+
+```bash
+git rebase --interactive --root
+```
+
+La commande `git rebase` permet de rejouer des enregistrements de modification
+de fichier. Il est possible de modifier des messages si l'on s'est trompé, de
+supprimer des fichiers historisés, de réunir un ensemble de changements en un
+seul enregistrement, et bien d'autres possibilités encore. L'option `--root`
+permet de rejouer l'ensemble des enregistrments depuis le début de l'historique
+et l'option `--interactive` permet d'afficher de manière interactive l'ensemble
+des options disponibles pour manipuler l'historique.
+
+#### Versions
+
+Parfois, nos utilisateurs ont besoin d'utiliser une certaines version de notre
+projet, à un point précis de l'historique de ce dernier. Pour faire cela, il
+est possible d'apposer des identifiants à notre historiques, comme des
+marque-pages.
+
+```bash
+git tag --annotate 0.1.0 --message 0.1.0
+```
+
+En utilisant la commande `git tag`, il est possible d'ajouter une version
+précise à un point de notre historique. Cela est particulièrement pratique dans
+le cadre du développement d'une application par exemple. On peut ajouter une
+annotation avec l'option `--annotate` ainsi qu'un message de description avec
+l'option `--message`.
+
+#### Changements temporaires
+
+Parfois, tout ce que nous souhations faire c'est tester rapidements des choses
+sans forcément les enregistrer. C'est pratique notamment si nous sommes en
+train de modifier quelque chose, mais que nous avons besoin de rapidement
+revenir sur notre branche initiale sans changements.
+
+```bash
+git stash
+```
+
+Après avoir effectué des modifications sur un fichier historisé, il suffit
+d'utiliser la commande `git stash`. Une fois fait, les changements sont ajouter
+à un espace temporaire, ce qui nous permet de faire toutes les opérations
+nécessaire sur la branche à l'état initial, c'est-à-dire sans modifications. Il
+est également possible de faire revenir les changements avec l'option `pop`.
+
+```bash
+git stash pop
+```
+
+Ceci est particulièrement pratique si nous nous sommes trompés de branche de
+travail par exemple.
+
+#### Récupérer des changements depuis une origine
+
+Lorsque l'on travaille à plusieurs, il peut être intéressant de pouvoir
+récupérer le travail de chacun lorsque c'est le cas.
+
+```bash
+git pull origin development
+```
+
+La commande `git pull` permet de récupérer les changements. Optionnellement, il
+est possible de lui préciser une origine ainsi qu'une branche à récupérer.
+
+#### Récupérer un dépôt
+
+Les plateformes comme GitHub et GitLab regorgent de projets tous plus
+intéressants les uns que les autres. Il peut être intéressant de les récupérer
+sur notre ordinateur afin de pouvoir les utiliser localement.
+
+```bash
+git clone git@github.com:aminnairi/collatz.git
+```
+
+Dans ce cas là, nous utiliserons la commande `git clone` suivi d'une URL nous
+permettant de récupérer le projet. Le projet sera créé dans un dossier
+contenant le nom du dépôt sans le nom de l'utilisateur et l'extension `.git`.
+Il est également possible de donner un chemin spécifique afin de récupérer le
+projet dans un autre dossier.
+
+```bash
+git clone git@github.com:aminnairi/collatz.git collatz-conjecture-test
+```
+
+Dans ce cas-ci, on clone le dépôt dans un nouveau dossier appelé
+`collatz-conjecture-test`. Dans tous les cas, si le dossier existe déjà, la
+commande echouera.
