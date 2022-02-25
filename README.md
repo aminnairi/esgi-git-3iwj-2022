@@ -6,6 +6,15 @@
 - OpenSSH
 - Git
 
+## Contrôles continus
+
+- Premier contrôle continu : date à prévoir
+- Deuxième contrôle continu : date à prévoir
+
+## Examen
+
+- Date à prévoir
+
 ## Cours
 
 ### GitHub
@@ -351,3 +360,49 @@ git clone git@github.com:aminnairi/collatz.git collatz-conjecture-test
 Dans ce cas-ci, on clone le dépôt dans un nouveau dossier appelé
 `collatz-conjecture-test`. Dans tous les cas, si le dossier existe déjà, la
 commande echouera.
+
+#### Résolution de conflits
+
+Git permet de travailler à plusieurs sur un projet, néanmoins, il peut arriver
+que plusieurs personnes aient besoin de travailler sur un même fichier. Dans ce
+cas là, les historiques d'une branche peuvent venir en conflit avec celles
+d'une autre. Pour résoudre les conflits, il suffit de séléctionner les
+changements à conserver, et supprimer les changements à supprimer. C'est aussi
+simple que de modifier un fichier avec son éditeur de texte. Git affiche d'une
+certaine façon les changements en provenance d'une branche externe et les
+changements fait sur notre propre branche afin de permettre de les identifier
+facilement.
+
+```
+<<<<< HEAD
+# Conflict Test
+=======
+# Test Conflict
+>>>>>>> title-update-2
+```
+
+Ici, nous pouvons voir que dans ce fichier, il y a un conflit entre deux développeur qui ont modifiés la même ligne avec deux textes différents. Nous pouvons modifier le fichier afin d'appliquer les bons changements.
+
+```
+# Conflict Test
+```
+
+Après réflexion avec le développeur, nous nous mettons d'accord pour adopter ce titre. Nous avons résolu le conflit, il ne nous reste plus qu'à apporter les modification dans notre historique.
+
+```bash
+git add README.md
+git commit --message "resolved conflict for the title"
+git push
+```
+
+Nous venons d'enregistrer les modification après résolution du conflit et nous avons poussé les changements sur notre dépôt distant pour synchronisation.
+
+### GitHub
+
+#### Issues
+
+Une issue est un ticket que l'on renseigne lorsque nous avons des nouvelles fonctionnalités à rajouter à un projet, un rapport de bug à effectuer, une question à propos d'une partie du projet etc...
+
+#### Pull request
+
+Nous avons vu comment créer des branches pour pouvoir apporter des modifications à un projet.
