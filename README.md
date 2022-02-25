@@ -3,7 +3,7 @@
 ## Pré-requis
 
 - Terminal de commande
-- OpenSSH
+- [OpenSSH]()
 - Git
 
 ## Contrôles continus
@@ -254,6 +254,10 @@ La liste des branches devrait apparaître. Le nom de la branche avec une étoile
 sur le côté nous indique la branche actuellement en cours d'utilisation et qui
 peut être utilisée pour synchroniser le dépôt distant.
 
+#### Exercice
+
+Créer un projet Git, et ajoutez un fichier `README.md` qui contient le texte `# github`. Vous synchroniserez les changements apporter en local avec un dépôt que vous créerez sur la plateforme GitHub.
+
 #### Ajout d'une nouvelle branche
 
 Les branches sont un système très puissant car elles permettent de travailler
@@ -269,6 +273,22 @@ Dans ce cas là, on utilisera la commande `git` avec l'option `branch`. Cette
 option prend en paramètre le nom de la branche à créer, ici
 `new-documentation`.
 
+#### Supprimer une branche
+
+Si une branche créé n'est plus nécessaire, on peut la supprimer de notre historique Git.
+
+```bash
+git branch --delete my-branch
+```
+
+À noter que les branches sont détruites localement, si l'on souhaite supprimer une branche distante, il ne suffit pas de pousser ses changements et il faut le faire explicitement.
+
+```bash
+git branch --delete origin my-branch
+```
+
+Cela aura pour effet de supprimer effectivement la branche distante.
+
 #### Changement de branche
 
 Créer une branche n'est pas suffisant puisqu'il sera nécessaire de changer la
@@ -281,6 +301,22 @@ git checkout new-documentation
 En utilisant la commande `git` ainsi que l'option `checkout` nous pouvons
 changer de branche à tout moment, en l'occurrence ici `new-documentation`.
 
+Il est également possible de créer une branche et d'utiliser cette branche directement en une seule commande.
+
+```bash
+git checkout -b new-branch
+```
+
+#### Publication de branche
+
+Si l'on souhaite reprendre son travail plus tard sur une autre machine, ou que l'on souhaite synchroniser son travail pour des raisons de sécurité, il est possible de synchroniser une branche vers un dépôt distant.
+
+```bash
+git push origin new-documentation
+```
+
+Cela aura pour effet de publier le contenu de la branche directement sur l'origine choisie. Un `git push` ne suffit pas et ne publie pas automatiquement les branches.
+
 #### Fusion de branches
 
 Une fois que nous avons fini de travailler sur notre branche, nous pouvoir
@@ -290,6 +326,7 @@ fusionner les changements de l'une des branches vers une autre.
 git checkout development
 git merge new-documentation
 git branch --delete new-documentation
+git branch --delete origin new-documentation
 ```
 
 Ici, nous utilisons la commande `git checkout` afin de nous déplacer vers notre
@@ -298,7 +335,16 @@ branche principale qui est ici `development`. Puis, nous utilisons la commande
 en l'occurrence la branche `new-documentation`. Enfin, puisque nous avons
 terminé les changements et que notre branche de travail n'est plus nécessaire,
 nous pouvons la supprimer en utilisant la commande `git branch` avec l'option
-`--delete` afin de supprimer la branche souhaitée, ici `new-documentation`.
+`--delete` afin de supprimer la branche souhaitée, ici `new-documentation`,
+localement et sur l'origine.
+
+#### Exercice
+
+Créer une nouvelle branche `new-documentation` qui contiendra le contenu de
+votre choix au fichier `README.md`. Une fois que cela est fait, vous publierez
+la branche sur le dépôt GitHub. Enfin, vous fusionnerez les changements vers la
+branche principale et vous supprimerez les branches localement et sur votre
+origine.
 
 #### Modifier l'historique
 
@@ -320,6 +366,28 @@ seul enregistrement, et bien d'autres possibilités encore. L'option `--root`
 permet de rejouer l'ensemble des enregistrments depuis le début de l'historique
 et l'option `--interactive` permet d'afficher de manière interactive l'ensemble
 des options disponibles pour manipuler l'historique.
+
+Une fois que cela est fait, il est nécessaire d'ajouter les changements à
+l'historique.
+
+```bash
+git add .
+```
+
+Le `.` ici est un alias vers le dossier courant sur lequel nous sommes dans le
+Shell. Cela signifie que cela ajoute tous les fichiers surveillé à enregistrer
+dans l'historique. Puisque le `rebase` est une opération potentiellement
+destructrice, il est nécessaire de forcer une synchronisation vers une origine.
+
+```bash
+git push --force
+```
+
+#### Exercice
+
+Remplacer tous les commits effectués jusqu'à présent par un seul et même
+commit. Vous vérifierez sur l'origine que le dépôt distant ne contient plus
+qu'un seul commit et que les changements sont toujours présents.
 
 #### Versions
 
@@ -345,7 +413,12 @@ Pour synchroniser la nouvelle version, il est possible d'utiliser la commande
 git push origin 0.1.0
 ```
 
-Désormais, notre version apparaît sur GitHub et pourra être récupér
+Désormais, notre version apparaît sur GitHub et pourra être récupéré. Si l'on s'est trompé sur une version, il est possible de la supprimer localement et à distance.
+
+```bash
+git push --delete origin 0.1.0
+git tag --delete 0.1.0
+```
 
 #### Changements temporaires
 
