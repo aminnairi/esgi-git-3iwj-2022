@@ -33,10 +33,14 @@ Pour pouvoir utiliser la plateforme GitHub, il est nécessaire de se créer un
 compte si ce n'est pas déjà fait. Pour cela, il suffit de se rendre sur le site
 internet https://github.com/
 
+![image](https://user-images.githubusercontent.com/18418459/155697366-9691c3be-bb38-4046-a531-12cc01c9293f.png)
+
 #### Connexion à un compte
 
 Une fois le compte créer, il suffit de se connecter à la même adresse
 https://github.com/
+
+![image](https://user-images.githubusercontent.com/18418459/155697437-c40ca3f7-4c6f-4716-a62c-f0bdddef294e.png)
 
 #### OpenSSH
 
@@ -66,6 +70,8 @@ suffit de séléctionner l'option `New SSH key`, puis de renseigner un nom pour
 la clé ainsi que le contenu de la clé. C'est le contenu de la clé publique que
 vous avez déjà copié.
 
+![image](https://user-images.githubusercontent.com/18418459/155697714-1d827bdc-75f5-4b10-b6fd-2b1620f3f1d4.png)
+
 #### Création d'un nouveau projet
 
 Nous pouvons désormais créer un nouveau projet depuis l'interface graphique de
@@ -73,6 +79,8 @@ GitHub. Pour cela, il faut se rendre [ici](https://github.com/new). Une fois
 que l'on a renseigné un nom pour notre dépôt ainsi qu'une déscription et une
 visibilité, on peut cliquer sur `create repository` afin de créer le projet
 Git. Nous verrons ensuite comment publier des modification sur ce projet.
+
+![image](https://user-images.githubusercontent.com/18418459/155697826-2689818c-f12e-4d02-bb79-d6dbeef3baa4.png)
 
 ### Git
 
@@ -175,6 +183,12 @@ Cette commande liste tous les changements qui ont été effectués avec leur has
 et leur message. Les changements sont affichés dans l'ordre du plus récent au
 plus ancien. L'auteur ainsi que la date y sont renseignés dans le cas où le
 projet est utilisé par plusieurs personnes.
+
+#### Étapes d'un fichier
+
+Un fichier suit un certain nombre d'étapes simples mais qu'il est important de bien comprendre avant de pouvoir être ajouté effectivement dans l'historique. Il est d'abord surveillé, c'est-à-dire que Git sait qu'un fichier a été créé ou modifié, ensuite il est ajouté en attente d'historisation, puis avec un message on l'ajoute 
+
+![image](https://user-images.githubusercontent.com/18418459/155701150-11c78e1a-802b-46bd-b758-25ee6b71f842.png)
 
 #### Ajout d'une origine distante.
 
@@ -306,6 +320,14 @@ précise à un point de notre historique. Cela est particulièrement pratique da
 le cadre du développement d'une application par exemple. On peut ajouter une
 annotation avec l'option `--annotate` ainsi qu'un message de description avec
 l'option `--message`.
+
+Pour synchroniser la nouvelle version, il est possible d'utiliser la commande `git push` en renseignant après l'origine le nom de la version.
+
+```bash
+git push origin 0.1.0
+```
+
+Désormais, notre version apparaît sur GitHub et pourra être récupér
 
 #### Changements temporaires
 
