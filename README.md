@@ -1,5 +1,7 @@
 # esgi-git-3iwj-2022
 
+https://github.com/aminnairi/esgi-git-3iwj-2022
+
 ## Pré-requis
 
 - Terminal de commande
@@ -8,12 +10,22 @@
 
 ## Contrôles continus
 
-- Premier contrôle continu : date à prévoir
+- Premier contrôle continu
+  - Date : 25/03/2022
+  - Sujet : tout jusqu'au chapitre sur les [rebase](#modifier-l-historique)
 - Deuxième contrôle continu : date à prévoir
 
 ## Examen
 
 - Date à prévoir
+
+## Références
+
+- [GitKraken (client Git graphique)](https://www.gitkraken.com/)
+- [Fish (Shell avec configuration par défaut moderne)](https://fishshell.com/)
+- [Oh My Fish (framework de configuration pour Fish)](https://github.com/oh-my-fish/oh-my-fish)
+- [Zsh (alternative à Bash)](https://github.com/zsh-users/zsh)
+- [Oh My Zsh (similaire à Oh My Fish)](https://github.com/ohmyzsh/ohmyzsh)
 
 ## Cours
 
@@ -102,6 +114,10 @@ profité pour améliorer certains aspects du logiciel BitKeeper en apprenant des
 choses que ce dernier faisait de mal comme être rapide, simple à utiliser et
 être capable de pouvoir s'utiliser sur des très larges projets comme le noyau
 Linux.
+
+#### Configuration
+
+TODO
 
 #### Initialisation
 
