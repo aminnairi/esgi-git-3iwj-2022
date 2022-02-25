@@ -117,7 +117,21 @@ Linux.
 
 #### Configuration
 
-TODO
+Avant de pouvoir commencer à utiliser la commande `git`, il est nécessaire d'ajouter au minimum un nom d'utilisateur et une adresse email. Il est recommandé d'utiliser le même nom d'utilisateur et adresse email qu'utilisé sur GitHub.
+
+```bash
+git config --global user.name "aminnairi"
+git config --global user.email "anairi@esgi.fr"
+```
+
+La commande `git config` permet de configurer un paramètre pour Git. l'option `--global` permet d'ajouter une option globale à tous les dépôts. Mais il est également possible d'avoir une configuration locale à un dépôt en particulier.
+
+```bash
+git config --local user.name "anairi"
+git config --local user.email "anairi@esgi.fr"
+```
+
+De cette manière, la configuration ne sera pas partagé avec d'autres dépôts. La configuration est écrite dans le fichier `.git/config`. Il n'est pas recommandé de modifier le fichier directement sauf si vous êtes sûr de ce que vous faites.
 
 #### Initialisation
 
