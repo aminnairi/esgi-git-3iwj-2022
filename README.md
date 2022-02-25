@@ -27,6 +27,10 @@ c'est-à-dire que ses changements sont enregistré dans un fichier qui est
 lisible par un client Git. Un client Git est un programme capable de comprendre
 et modifier un projet Git.
 
+Cette plateforme est né de la volonté des développeurs du noyau Linux de se soustraire à la dépendance aux logiciels propriétaires d'historisation de code comme BitKeeper. En effet, ce dernier, qui était originellement gratuit et open-source, s'est vu se transformer en solution propriétaire et payante du jour au lendemain, ce qui n'a pas plus aux développeurs. Cela a entraîné notamment Linus TORVALDS, à l'origine de la création du noyau, à développer son propre outils d'historisation de code qu'il a nommé Git.
+
+L'avantage de Git par rapports à d'autres solutions propriétaires similaires et qu'il est décentralisé, donc sa gestion est plus simple, et son déploiement également puisqu'il n'y a pas de serveur : tout ordinateur peut devenir un dépôt d'historique des changements apportés à un projet. Linus en a également profité pour améliorer certains aspects du logiciel BitKeeper en apprenant des choses que ce dernier faisait de mal comme être rapide, simple à utiliser et être capable de pouvoir s'utiliser sur des très larges projets comme le noyau Linux.
+
 #### Création d'un compte
 
 Pour pouvoir utiliser la plateforme GitHub, il est nécessaire de se créer un
