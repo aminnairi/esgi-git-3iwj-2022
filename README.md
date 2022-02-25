@@ -256,7 +256,9 @@ peut être utilisée pour synchroniser le dépôt distant.
 
 #### Exercice
 
-Créer un projet Git, et ajoutez un fichier `README.md` qui contient le texte `# github`. Vous synchroniserez les changements apporter en local avec un dépôt que vous créerez sur la plateforme GitHub.
+Créer un projet Git, et ajoutez un fichier `README.md` qui contient le texte `#
+github`. Vous synchroniserez les changements apporter en local avec un dépôt
+que vous créerez sur la plateforme GitHub.
 
 #### Ajout d'une nouvelle branche
 
@@ -275,13 +277,16 @@ option prend en paramètre le nom de la branche à créer, ici
 
 #### Supprimer une branche
 
-Si une branche créé n'est plus nécessaire, on peut la supprimer de notre historique Git.
+Si une branche créé n'est plus nécessaire, on peut la supprimer de notre
+historique Git.
 
 ```bash
 git branch --delete my-branch
 ```
 
-À noter que les branches sont détruites localement, si l'on souhaite supprimer une branche distante, il ne suffit pas de pousser ses changements et il faut le faire explicitement.
+À noter que les branches sont détruites localement, si l'on souhaite supprimer
+une branche distante, il ne suffit pas de pousser ses changements et il faut le
+faire explicitement.
 
 ```bash
 git branch --delete origin my-branch
@@ -301,7 +306,8 @@ git checkout new-documentation
 En utilisant la commande `git` ainsi que l'option `checkout` nous pouvons
 changer de branche à tout moment, en l'occurrence ici `new-documentation`.
 
-Il est également possible de créer une branche et d'utiliser cette branche directement en une seule commande.
+Il est également possible de créer une branche et d'utiliser cette branche
+directement en une seule commande.
 
 ```bash
 git checkout -b new-branch
@@ -309,13 +315,17 @@ git checkout -b new-branch
 
 #### Publication de branche
 
-Si l'on souhaite reprendre son travail plus tard sur une autre machine, ou que l'on souhaite synchroniser son travail pour des raisons de sécurité, il est possible de synchroniser une branche vers un dépôt distant.
+Si l'on souhaite reprendre son travail plus tard sur une autre machine, ou que
+l'on souhaite synchroniser son travail pour des raisons de sécurité, il est
+possible de synchroniser une branche vers un dépôt distant.
 
 ```bash
 git push origin new-documentation
 ```
 
-Cela aura pour effet de publier le contenu de la branche directement sur l'origine choisie. Un `git push` ne suffit pas et ne publie pas automatiquement les branches.
+Cela aura pour effet de publier le contenu de la branche directement sur
+l'origine choisie. Un `git push` ne suffit pas et ne publie pas automatiquement
+les branches.
 
 #### Fusion de branches
 
@@ -326,7 +336,7 @@ fusionner les changements de l'une des branches vers une autre.
 git checkout development
 git merge new-documentation
 git branch --delete new-documentation
-git branch --delete origin new-documentation
+git push --delete origin new-documentation
 ```
 
 Ici, nous utilisons la commande `git checkout` afin de nous déplacer vers notre
@@ -413,12 +423,49 @@ Pour synchroniser la nouvelle version, il est possible d'utiliser la commande
 git push origin 0.1.0
 ```
 
-Désormais, notre version apparaît sur GitHub et pourra être récupéré. Si l'on s'est trompé sur une version, il est possible de la supprimer localement et à distance.
+Désormais, notre version apparaît sur GitHub et pourra être récupéré. Si l'on
+s'est trompé sur une version, il est possible de la supprimer localement et à
+distance.
 
 ```bash
 git push --delete origin 0.1.0
 git tag --delete 0.1.0
 ```
+
+#### Version sémantique
+
+Une version sémantique est un standard permettant de facilement reconnaître une
+version dans un logiciel. Elle se compose de trois parties :
+
+- Une version majeure
+- Une version mineure
+- Une version de correctif
+
+Ces trois parties sont séparées par un symbole point (`.`). Les versions
+commencent à partir de `0.1.0`.
+
+Lorsque l'on modifie son projet et que l'on publie de nouveaux correctifs de
+sécurité par exemple, on incrémente l'identifiant correspondant. Par exemple,
+si je suis en version `0.1.0`, je passerais donc après le correctif en version
+`0.1.1`. Si je suis en version `1.0.1`, je passerais en version `1.0.2`.
+
+Lorsque l'on ajoute de nouvelles fonctionnalités, on incrémente la version
+mineure. Par exemple, si je suis en version 0.1.0, je passe en version 0.2.0
+après ajout d'une nouvelle fonctionnalité. Si je suis en version 1.0.1, je
+passe en version 1.2.0, la version de correctif est réinitialisée dans ce cas.
+
+Enfin, lorsque j'ajoute des changements qui entraîne une changement lourd du
+logiciel et qu'une simple mise à jour n'est pas suffisante (par exemple,
+changer tout une manière d'appeler une fonction), j'incrémente la version
+majeure. Si je suis en version 0.1.0, je passe en version 1.0.0. Si je suis en
+version 1.2.4, je passe en version 2.0.0. Notez que la version mineure et de
+correctif sont toutes deux réinitialisées.
+
+#### Exercice
+
+Ajoutez un lien vers votre dépôt GitHub personnel dans le fichier `README.md`.
+Ensuite, publiez une nouvelle version. Choisissez la version la plus adaptée à
+ce cas de figure.
 
 #### Changements temporaires
 
@@ -521,15 +568,8 @@ git push
 Nous venons d'enregistrer les modification après résolution du conflit et nous
 avons poussé les changements sur notre dépôt distant pour synchronisation.
 
-### GitHub
+#### Exercice
 
-#### Issues
-
-Une issue est un ticket que l'on renseigne lorsque nous avons des nouvelles
-fonctionnalités à rajouter à un projet, un rapport de bug à effectuer, une
-question à propos d'une partie du projet etc...
-
-#### Pull request
-
-Nous avons vu comment créer des branches pour pouvoir apporter des
-modifications à un projet.
+Ajouter un collaborateur à votre projet, puis modifiez la même ligne du même
+fichier. Tentez ensuite de vous mettre d'accord pour choisir la ligne à
+retenir, résolvez les conflits et synchronisez tous sur le dépôt distant.
