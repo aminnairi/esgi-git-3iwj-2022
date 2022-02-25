@@ -86,9 +86,22 @@ Git. Nous verrons ensuite comment publier des modification sur ce projet.
 
 #### Introduction
 
-Git est né de la volonté des développeurs du noyau Linux de se soustraire à la dépendance aux logiciels propriétaires d'historisation de code comme BitKeeper. En effet, ce dernier, qui était originellement gratuit et open-source, s'est vu se transformer en solution propriétaire et payante du jour au lendemain, ce qui n'a pas plus aux développeurs. Cela a entraîné notamment Linus TORVALDS, à l'origine de la création du noyau, à développer son propre outils d'historisation de code qu'il a nommé Git.
+Git est né de la volonté des développeurs du noyau Linux de se soustraire à la
+dépendance aux logiciels propriétaires d'historisation de code comme BitKeeper.
+En effet, ce dernier, qui était originellement gratuit et open-source, s'est vu
+se transformer en solution propriétaire et payante du jour au lendemain, ce qui
+n'a pas plus aux développeurs. Cela a entraîné notamment Linus TORVALDS, à
+l'origine de la création du noyau, à développer son propre outils
+d'historisation de code qu'il a nommé Git.
 
-L'avantage de Git par rapports à d'autres solutions propriétaires similaires et qu'il est décentralisé, donc sa gestion est plus simple, et son déploiement également puisqu'il n'y a pas de serveur : tout ordinateur peut devenir un dépôt d'historique des changements apportés à un projet. Linus en a également profité pour améliorer certains aspects du logiciel BitKeeper en apprenant des choses que ce dernier faisait de mal comme être rapide, simple à utiliser et être capable de pouvoir s'utiliser sur des très larges projets comme le noyau Linux.
+L'avantage de Git par rapports à d'autres solutions propriétaires similaires et
+qu'il est décentralisé, donc sa gestion est plus simple, et son déploiement
+également puisqu'il n'y a pas de serveur : tout ordinateur peut devenir un
+dépôt d'historique des changements apportés à un projet. Linus en a également
+profité pour améliorer certains aspects du logiciel BitKeeper en apprenant des
+choses que ce dernier faisait de mal comme être rapide, simple à utiliser et
+être capable de pouvoir s'utiliser sur des très larges projets comme le noyau
+Linux.
 
 #### Initialisation
 
@@ -186,7 +199,11 @@ projet est utilisé par plusieurs personnes.
 
 #### Étapes d'un fichier
 
-Un fichier suit un certain nombre d'étapes simples mais qu'il est important de bien comprendre avant de pouvoir être ajouté effectivement dans l'historique. Il est d'abord surveillé, c'est-à-dire que Git sait qu'un fichier a été créé ou modifié, ensuite il est ajouté en attente d'historisation, puis avec un message on l'ajoute 
+Un fichier suit un certain nombre d'étapes simples mais qu'il est important de
+bien comprendre avant de pouvoir être ajouté effectivement dans l'historique.
+Il est d'abord surveillé, c'est-à-dire que Git sait qu'un fichier a été créé ou
+modifié, ensuite il est ajouté en attente d'historisation, puis avec un message
+on l'ajoute à l'historique Git.
 
 ![image](https://user-images.githubusercontent.com/18418459/155701150-11c78e1a-802b-46bd-b758-25ee6b71f842.png)
 
@@ -321,7 +338,8 @@ le cadre du développement d'une application par exemple. On peut ajouter une
 annotation avec l'option `--annotate` ainsi qu'un message de description avec
 l'option `--message`.
 
-Pour synchroniser la nouvelle version, il est possible d'utiliser la commande `git push` en renseignant après l'origine le nom de la version.
+Pour synchroniser la nouvelle version, il est possible d'utiliser la commande
+`git push` en renseignant après l'origine le nom de la version.
 
 ```bash
 git push origin 0.1.0
@@ -409,13 +427,17 @@ facilement.
 >>>>>>> title-update-2
 ```
 
-Ici, nous pouvons voir que dans ce fichier, il y a un conflit entre deux développeur qui ont modifiés la même ligne avec deux textes différents. Nous pouvons modifier le fichier afin d'appliquer les bons changements.
+Ici, nous pouvons voir que dans ce fichier, il y a un conflit entre deux
+développeur qui ont modifiés la même ligne avec deux textes différents. Nous
+pouvons modifier le fichier afin d'appliquer les bons changements.
 
 ```
 # Conflict Test
 ```
 
-Après réflexion avec le développeur, nous nous mettons d'accord pour adopter ce titre. Nous avons résolu le conflit, il ne nous reste plus qu'à apporter les modification dans notre historique.
+Après réflexion avec le développeur, nous nous mettons d'accord pour adopter ce
+titre. Nous avons résolu le conflit, il ne nous reste plus qu'à apporter les
+modification dans notre historique.
 
 ```bash
 git add README.md
@@ -423,14 +445,18 @@ git commit --message "resolved conflict for the title"
 git push
 ```
 
-Nous venons d'enregistrer les modification après résolution du conflit et nous avons poussé les changements sur notre dépôt distant pour synchronisation.
+Nous venons d'enregistrer les modification après résolution du conflit et nous
+avons poussé les changements sur notre dépôt distant pour synchronisation.
 
 ### GitHub
 
 #### Issues
 
-Une issue est un ticket que l'on renseigne lorsque nous avons des nouvelles fonctionnalités à rajouter à un projet, un rapport de bug à effectuer, une question à propos d'une partie du projet etc...
+Une issue est un ticket que l'on renseigne lorsque nous avons des nouvelles
+fonctionnalités à rajouter à un projet, un rapport de bug à effectuer, une
+question à propos d'une partie du projet etc...
 
 #### Pull request
 
-Nous avons vu comment créer des branches pour pouvoir apporter des modifications à un projet.
+Nous avons vu comment créer des branches pour pouvoir apporter des
+modifications à un projet.
