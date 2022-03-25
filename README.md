@@ -608,8 +608,6 @@ retenir, résolvez les conflits et synchronisez tous sur le dépôt distant.
 
 #### Issues
 
-Pour ajouter une issue, il suffit de se rendre sur ce [lien](https://github.com/aminnairi/esgi-git-3iwj-2022/issues).
-
 Une issue permet d'organiser les différentes fonctionnalités de notre application et de les répartir entre tous les collaborateurs.
 
 #### Labels
