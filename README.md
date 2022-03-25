@@ -26,6 +26,9 @@ https://github.com/aminnairi/esgi-git-3iwj-2022
 - [Oh My Fish (framework de configuration pour Fish)](https://github.com/oh-my-fish/oh-my-fish)
 - [Zsh (alternative à Bash)](https://github.com/zsh-users/zsh)
 - [Oh My Zsh (similaire à Oh My Fish)](https://github.com/ohmyzsh/ohmyzsh)
+- [Trello : permet d'organiser ses tâches](https://trello.com/)
+- [Jira : permet d'organiser ses tâches dans l'écosystème Atlassian](https://www.atlassian.com/software/jira)
+- [Stackedit : permet de prévisualiser du code Markdown dans le navigateur](https://stackedit.io/app#)
 
 ## Cours
 
