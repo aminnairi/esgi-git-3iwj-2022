@@ -681,4 +681,24 @@ Par groupe de deux ou plus :
 #### Modèles de Pull Request
 #### Badges
 
+## Groupes de travail
 
+### Premier groupe
+
+Gael BOURGES, Yassine ABDELKADER et Axel HALIFA.
+
+### Deuxième groupe
+
+Bastien DIKIADI NDONGALA, Ina AVELAR PEIXOTO
+
+### Troisième groupe
+
+Daniel MANEA, VINCENT CHARPENTIER
+
+### Quatrième groupe
+
+Eunji, Zaid et Nicky
+
+### Cinquième groupe
+
+Jugurtha et Makan
