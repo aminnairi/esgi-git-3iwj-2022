@@ -10,7 +10,7 @@ https://github.com/aminnairi/esgi-git-3iwj-2022
 
 ## Contrôles continus
 
-- Premier contrôle continu
+- [X] Premier contrôle continu
   - Date : 25/03/2022
   - Sujet : tout jusqu'au chapitre sur les [rebase](#modifier-l-historique)
 - Deuxième contrôle continu : date à prévoir
@@ -319,7 +319,7 @@ une branche distante, il ne suffit pas de pousser ses changements et il faut le
 faire explicitement.
 
 ```bash
-git branch --delete origin my-branch
+git push --delete origin my-branch
 ```
 
 Cela aura pour effet de supprimer effectivement la branche distante.
@@ -603,3 +603,27 @@ avons poussé les changements sur notre dépôt distant pour synchronisation.
 Ajouter un collaborateur à votre projet, puis modifiez la même ligne du même
 fichier. Tentez ensuite de vous mettre d'accord pour choisir la ligne à
 retenir, résolvez les conflits et synchronisez tous sur le dépôt distant.
+
+### Collaboration
+
+#### Issues
+
+Pour ajouter une issue, il suffit de se rendre sur ce [lien](https://github.com/aminnairi/esgi-git-3iwj-2022/issues).
+
+Une issue permet d'organiser les différentes fonctionnalités de notre application et de les répartir entre tous les collaborateurs.
+
+#### Labels
+#### Milestones
+#### Pull requests
+
+### Open Source et bonnes pratiques
+
+#### README.md
+#### Description
+#### Guide de contribution
+#### License
+#### Modèles d'issues
+#### Modèles de Pull Request
+#### Badges
+
+
