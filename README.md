@@ -610,12 +610,51 @@ retenir, résolvez les conflits et synchronisez tous sur le dépôt distant.
 
 Une issue permet d'organiser les différentes fonctionnalités de notre application et de les répartir entre tous les collaborateurs.
 
+Une issue à un titre et un contenu. On peut également lui affecter un ou plusieurs assignee (un responsable), un label, un projet, un milestone.
+
+Il est possible de créer des discussions communautaire autour d'une issue, de discuter de sa pertinence, de challenger les idées qui sont soulevées etc...
+
 #### Labels
 
 Les labels permettent de catégoriser une issue ou une pull request.
 
+Il est possible d'ajouter plusieurs catégories de label à une seul issue ou pull request.
+
+Il est également possible de créer ses propres labels, avec un nom, une description et une couleur permettant de l'identifier facilement.
+
+Enfin, il est possible de modifier ou supprimer les labels. Certains labels sont déjà existants et ne correspondent probablement pas au projet sur lequel on souhaite travailler.
+
 #### Milestones
+
+Un milestone est un jalon, c'est-à-dire un moment important du développement de notre projet.
+
+Cela permet de se donner des délais à respecter pour proposer un changement important dans la vie d'un projet, il est donc possible de créer des milestones pour des versions à publier, par exemple un milestone pour une future version 2.0.0.
+
+Un milestone a un titre, une description et optionnellement une date à laquelle la milestone doit être achevée.
+
+Une milestone comprends un ensemble d'issues ou de pull request qu'il est possible de lier à cette dernière.
+
 #### Pull requests
+
+Nous avons vu qu'il était possible de s'organiser en branches dans un dépôt. Cela permet de séparer le travail à faire sur une fonctionnalité en particulier. Nous avons également vu qu'il était possible, une fois le travail sur une branche terminé, de fusionner les changements vers une autre branche comme la branche principale par exemple.
+
+Cela est également possible via GitHub et son interface de pull request.
+
+Au lieu de fusionner les changements de nos branches nous-mêmes, nous allons proposer d'ouvrir une pull request pour une branche que nous souhaitons fusionner.
+
+L'intérêt est de pouvoir proposer aux autres collaborateurs la possibilité de pouvoir effectuer des revues de code, cela est donc une très bonne pratique à adopter en travail collaboratif.
+
+Il est possible de lier une issue à une pull request en utilisant les mot-clés `Closes #3` pour pouvoir fermer l'issues #3 par exemple, cela permet, une fois la pull request résolue, de pouvoir automatiquement fermer une issue. Cela ajoute une couche d'automatisation non negligeable lorsque nous travaillons sur plusieurs dizaines de pull request et issues en même temps.
+
+#### Project
+
+Un projet est un type d'organisation spéciale qui permet de simuler les bonnes pratiques liées aux méthodes Agiles et Scrum puisqu'il est possible de retrouver toutes les catégories de tâches (à faire, en cours, fait) dans un projet lorsqu'il est créé en mode Kanban.
+
+Si l'on créé une pull request ou une issue, il est possible de lier ces derniers à un projet, permettant de facilement tracker son progrès au travers de notre projet Git. C'est une manière de voir le dépôt de plus loin et d'avoir une vue d'ensemble sur ce qu'il reste à faire.
+
+Il est possible d'automatiser tout un projet en choisissant le mode Kanban with reviews.
+
+Dans ce mode, les issues et les pull request sont automatiquement déplacées dans les bonnes colonnes en fonction de si une issue est ouverte ou fermées, si une pull request est en attente de revue de code ou non, etc...
 
 #### Exercice
 
