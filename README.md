@@ -28,6 +28,7 @@ https://github.com/aminnairi/esgi-git-3iwj-2022
 - [Oh My Zsh (similaire à Oh My Fish)](https://github.com/ohmyzsh/ohmyzsh)
 - [Trello : permet d'organiser ses tâches](https://trello.com/)
 - [Jira : permet d'organiser ses tâches dans l'écosystème Atlassian](https://www.atlassian.com/software/jira)
+- [GitLab : alternative à GitHub](https://docs.gitlab.com/ee/ci/)
 - [Stackedit : permet de prévisualiser du code Markdown dans le navigateur](https://stackedit.io/app#)
 
 ## Cours
