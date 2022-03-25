@@ -611,6 +611,9 @@ retenir, résolvez les conflits et synchronisez tous sur le dépôt distant.
 Une issue permet d'organiser les différentes fonctionnalités de notre application et de les répartir entre tous les collaborateurs.
 
 #### Labels
+
+Les labels permettent de catégoriser une issue ou une pull request.
+
 #### Milestones
 #### Pull requests
 
