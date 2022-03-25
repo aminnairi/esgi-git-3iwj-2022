@@ -617,6 +617,17 @@ Les labels permettent de catégoriser une issue ou une pull request.
 #### Milestones
 #### Pull requests
 
+#### Exercice
+
+Par groupe de deux ou plus :
+- Créer un dépôt Git sur GitHub avec le nom de votre choix
+- Créez des issues sur une idée de projet (un site internet, une librairie, etc...)
+- Créez des branches et ajouter des modification permettant de répondre à ces issues
+- Créez une pull request par branche et faites valider votre code par un membre de votre équipe
+- Simulez des requêtes de changement sur vos pull request (vous n'êtes pas d'accord sur une partie du code)
+- Automatiser votre workflow avec un Project
+- Montrez le résultat de tout cela lors d'un exemple préparé avec vos camarades
+
 ### Open Source et bonnes pratiques
 
 #### README.md
