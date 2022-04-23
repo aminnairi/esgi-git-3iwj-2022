@@ -3,8 +3,9 @@ name: Test
 on: [ pull_request, push ]
 
 jobs:
-  name: Check that the unit test are all passing
-  runs-on: ubuntu-20.04
-  steps:
-    - name: Hello, world
-      run: echo "Hello, world!"
+  test:
+    name: Check that the unit test are all passing
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Hello, world
+        run: echo "Hello, world!"
