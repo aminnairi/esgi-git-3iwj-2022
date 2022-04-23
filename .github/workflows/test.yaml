@@ -1,3 +1,23 @@
-# 1. Lancer un conteneur NGINX
-# 2. Vérifier que le serveur répond bien sur localhost
-# 3. Stopper le conteneur
+name: Test
+
+# tester toutes les versions de NGINX (en utilisant une matrice)
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  test:
+    name: Test that the NGINX's Docker image is working properly
+    runs-on: ${{ matrix.operating_system }}
+
+    steps:
+      - name: Pull
+        run: docker pull nginx:1.21.6-alpine
+      - name: Run
+        run: docker run --detach --publish 80:80 --name nginx nginx
+      - name: HTTP Request
+        run: curl http://localhost
+      - name: Stop
+        run: docker stop nginx

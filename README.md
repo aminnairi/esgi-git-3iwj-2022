@@ -674,6 +674,35 @@ Par groupe de deux ou plus :
 ### Open Source et bonnes pratiques
 
 #### README.md
+
+```markdown
+# Titre
+
+## Pré-requis
+
+- Pré-requis 1
+- Pré-requis 2
+- Pré-requis 3
+
+## Usage
+
+### Première commande
+
+Description de la commande.
+
+\`\`\`bash
+commande numero 1
+\`\`\`
+
+### Première commande
+
+Description de la commande.
+
+\`\`\`bash
+commande numero 1
+\`\`\`
+```
+
 #### Description
 #### Guide de contribution
 #### License
@@ -681,4 +710,11 @@ Par groupe de deux ou plus :
 #### Modèles de Pull Request
 #### Badges
 
+### GitHub Action
 
+- [Guide de démarrage rapide](https://docs.github.com/en/actions/quickstart)
+- [Documentation](https://docs.github.com/en/actions/learn-github-actions)
+- [Syntaxe d'une Action GitHub](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
+- [Matrices](https://docs.github.com/en/actions/using-jobs/using-a-build-matrix-for-your-jobs)
+- [Conteneurs](https://docs.github.com/en/actions/using-jobs/running-jobs-in-a-container)
+- [GitHub Action Market Place](https://github.com/marketplace?type=actions)
