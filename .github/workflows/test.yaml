@@ -1,8 +1,6 @@
 name: Test
 
-on:
-  - pull_request
-  - push
+on: [ pull_request, push ]
 
 jobs:
   name: Check that the unit test are all passing
