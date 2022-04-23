@@ -1,5 +1,7 @@
 # esgi-git-3iwj-2022
 
+[![Test](https://github.com/aminnairi/esgi-git-3iwj-2022-exercise-github-actions/actions/workflows/test.yaml/badge.svg)](https://github.com/aminnairi/esgi-git-3iwj-2022-exercise-github-actions/actions/workflows/test.yaml)
+
 https://github.com/aminnairi/esgi-git-3iwj-2022
 
 ## Pré-requis
