@@ -1,0 +1,39 @@
+name: Bitcoin
+
+on:
+  schedule:
+    - cron: 0 * * * *
+
+jobs:
+  bitcoin:
+    name: Update the Bitcoin price every hour
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Bitcoin Price Fetch
+        run: 'curl https://api.coindesk.com/v1/bpi/currentprice.json | jq ".bpi.USD.rate_float" > bitcoin_price.txt'
+
+      - name: Echo
+        run: 'echo "![Bitcoin](https://badgen.net/badge/Bitcoin/$(cat bitcoin_price.txt)/blue?icon=bitcoin)" > README.md'
+
+      - name: Cleanup
+        run: rm bitcoin_price.txt
+
+      - name: Git config name
+        run: git config user.name "GitHub"
+
+      - name: Git config email
+        run: git config user.email "github@github.com"
+
+      - name: Staging
+        run: git add .
+
+      - name: Commit
+        run: git commit --message "Update the bitcoin price"
+
+      - name: Push
+        run: git push
+
