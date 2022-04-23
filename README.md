@@ -675,40 +675,31 @@ Par groupe de deux ou plus :
 
 #### README.md
 
-```markdown
-# Titre
-
-## Pré-requis
-
-- Pré-requis 1
-- Pré-requis 2
-- Pré-requis 3
-
-## Usage
-
-### Première commande
-
-Description de la commande.
-
-\`\`\`bash
-commande numero 1
-\`\`\`
-
-### Première commande
-
-Description de la commande.
-
-\`\`\`bash
-commande numero 1
-\`\`\`
-```
+Un `README.md` permet de décrire un projet, notamment avec les fichiers utiles (licenses, guides de contribution, ...). C'est généralement le point d'entrée de tout projet sur GitHub (comme un `index.html` pour un site internet).
 
 #### Description
+
+Une description permet de rendre votre projet visible sur le moteur de recherche de GitHub, mais également de décrire l'objectif du projet.
+
 #### Guide de contribution
+
+Un guide de contribution est généralement construit dans un fichier `CONTRIBUTING.md`. Il rassemble toutes les instructions et informations utiles à n'importe quel utilisateur souhaitant contribuer au projet.
+
 #### License
+
+Un fichier `LICENCE` est une license est un fichier important puisqu'il ajoute une dimension légale à votre projet. C'est ce qui permet d'ajouter un copyright, permettant ainsi de limiter l'utilisation de votre projet à certains cas d'utilisation seulement.
+
 #### Modèles d'issues
+
+Un modèle d'issue permet aux contributeur du projet de catégoriser un problème ou une demande. Par exemple, si vous souhaitez formatter les demande de nouvelle fonctionnalités, il suffit de créer un template dans le fichier `.github/ISSUE_TEMPLATE/feature_request.md`. Le nom des dossiers `.github/ISSUE_TEMPLATE` doivent être respecté, ainsi que la casse. Le nom du fichier `feature_request.md` peut avoir le nom que vous souhaitez. Essayez de choisir un nom cohérent. Si vous souhaitez avoir un modèle pour les rapports de bug par exemple, vous pouvez créer un fichier `.github/ISSUE_TEMPLATE/bug_report.md`. Ces fichiers peuvent être générés directement depuis l'interface GitHub avec des modèles déjà remplis pour vous.
+
 #### Modèles de Pull Request
+
+Pour pouvoir normaliser une proposition de changement de code, il est possible d'ajouter le modèle normalisé dans le fichier `.github/pull_request_template.md`. Le nom du fichier est important car sinon il n'est pas reconnu comme un modèle de pull request.
+
 #### Badges
+
+Il est possible d'avoir des badges nous permettant d'avoir des indications sur le status d'une Action par exemple.
 
 ### GitHub Action
 
