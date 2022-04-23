@@ -17,7 +17,7 @@ jobs:
         run: 'curl https://api.coindesk.com/v1/bpi/currentprice.json | jq ".bpi.USD.rate_float" > bitcoin_price.txt'
 
       - name: Echo
-        run: 'echo "![Bitcoin](https://badgen.net/badge/Bitcoin/$(cat bitcoin_price.txt)/blue?icon=bitcoin)" > README.md'
+        run: '#echo "![Bitcoin](https://badgen.net/badge/Bitcoin/$(cat bitcoin_price.txt)/blue?icon=bitcoin)" > README.md'
 
       - name: Cleanup
         run: rm bitcoin_price.txt
