@@ -1,11 +1,3 @@
-name: Test
-
-on: [ pull_request, push ]
-
-jobs:
-  test:
-    name: Check that the unit test are all passing
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Fail intentionally
-        run: exit 1
+# 1. Lancer un conteneur NGINX
+# 2. Vérifier que le serveur répond bien sur localhost
+# 3. Stopper le conteneur
