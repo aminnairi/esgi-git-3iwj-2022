@@ -2,7 +2,10 @@ name: Bitcoin
 
 on:
   schedule:
-    - cron: 0 * * * *
+    # Pour éviter de le déclencher inutilement dans ce dépôt
+    - cron: 0 0 0 0 0
+    # Remplacer cette ligne par :
+    # - cron: 0 * * * *
 
 jobs:
   bitcoin:
